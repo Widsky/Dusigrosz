@@ -1,0 +1,9 @@
+@import "generic/reset";
+@import "settings/mixins";
+
+@import "settings/colors";
+@import "settings/fonts";
+
+body {
+  font-family: $font-open;
+}
