@@ -1,0 +1,21 @@
+.header {
+  background-color: $main-color;
+  height: 5rem;
+  font-size: 1.7rem;
+  color: white;
+
+  .header__container {
+    @include between;
+    height: 100%;
+
+    .header__logo {
+      font-size: 2.5rem;
+
+    }
+
+    .header__user {
+      font-size: 1.9rem;
+      font-weight: bold;
+    }
+  }
+}

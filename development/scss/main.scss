@@ -1,14 +1,32 @@
 @import "generic/reset";
-@import "settings/mixins";
 
+@import "settings/mixins";
 @import "settings/colors";
 @import "settings/fonts";
 
-$bg-color: dodgerblue;
-$font-color: #333030;
+@import "elements/header";
+
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
 
 body {
   background-color: $bg-color;
-  color: $font-color;
-  font-family: sans-serif;
+  font-family: $main-font;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-family: $font-logo;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
 }

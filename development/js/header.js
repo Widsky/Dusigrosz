@@ -1,7 +1,4 @@
 import React from "react";
+import ReactDOM from "react-dom";
 
-export function Custom() {
-    return (
-        <div>test</div>
-    );
-}
+import "../scss/main.scss"

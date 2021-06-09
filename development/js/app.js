@@ -1,14 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
 import "../scss/main.scss"
 
-import {Custom} from "./header";
-
 const App = () => {
-    return <Custom/>
+    return <div>jestem w app</div>
 }
 
 
 
-ReactDOM.render(<App/>, document.getElementById("header"));
+ReactDOM.render(<App/>, document.getElementById("app"));
