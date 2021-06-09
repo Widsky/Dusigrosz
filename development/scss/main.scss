@@ -4,6 +4,11 @@
 @import "settings/colors";
 @import "settings/fonts";
 
+$bg-color: dodgerblue;
+$font-color: #333030;
+
 body {
-  font-family: $font-open;
+  background-color: $bg-color;
+  color: $font-color;
+  font-family: sans-serif;
 }
