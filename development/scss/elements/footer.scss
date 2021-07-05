@@ -1,0 +1,9 @@
+footer {
+  @include center;
+  height: 2rem;
+  margin-top: 4rem;
+  background: rgb(255,0,215);
+  background: linear-gradient(201deg, rgba(255,0,215,1) 0%, rgba(121,9,104,1) 33%, rgba(0,212,255,1) 100%);
+  border-radius: 0 1rem 0 0;
+  color: white;
+}

@@ -1,0 +1,40 @@
+.expense__price {
+  max-width: 7rem;
+}
+
+.expense__price,
+.income__input {
+  border-radius: 1rem;
+  border: 1px solid #d2cdcd;
+  padding: 0.5rem 1rem;
+  box-shadow: 3px 2px 9px -2px gray;
+  text-align:center;
+  font-family: $main-font;
+  font-size: 1.4rem;
+
+  &::placeholder {
+    font-family: $main-font;
+    color: #918e8e;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+}
+
+.dev__input {
+  border: none;
+  border-radius: 3rem;
+  max-width: 4rem;
+  text-align:center;
+  font-family: $main-font;
+
+  &::placeholder {
+    font-family: $main-font;
+    color: black;
+  }
+}

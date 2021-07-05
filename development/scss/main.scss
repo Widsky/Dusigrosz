@@ -5,9 +5,15 @@
 @import "settings/fonts";
 
 @import "elements/header";
+@import "elements/income";
+@import "elements/expenses";
+@import "elements/inputs";
+@import "elements/buttons";
+@import "elements/development";
+@import "elements/footer";
 
 
-html {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -17,6 +23,7 @@ html {
 body {
   background-color: $bg-color;
   font-family: $main-font;
+
 }
 
 .container {

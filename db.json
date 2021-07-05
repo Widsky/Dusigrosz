@@ -1,0 +1,100 @@
+{
+  "income": [
+    {
+      "id": 1 ,
+      "value": 7000
+    },
+
+    {
+      "id": 2 ,
+      "value": 3000
+    },
+
+    {
+      "id": 3 ,
+      "value": 10000
+    }
+  ],
+
+  "expenses": [
+    {
+      "id": 1,
+      "name": "percentage",
+      "value": 17
+    },
+
+    {
+      "id": 2,
+      "name": "sum",
+      "value": 1717
+    },
+
+    {
+      "id": 3 ,
+      "name": "Rest",
+      "amount": 8283
+    },
+
+    {
+      "id": 4 ,
+      "name": "Mieszkanie",
+      "price": 1000
+    },
+
+    {
+      "id": 5 ,
+      "name": "Jedzenie",
+      "price": 456
+    },
+
+    {
+      "id": 6 ,
+      "name": "Prąd",
+      "price": 54
+    },
+
+    {
+      "id": 7 ,
+      "name": "Woda",
+      "price": 59
+    },
+
+    {
+      "id": 8 ,
+      "name": "Rata za odkurzacz",
+      "price": 96
+    },
+
+    {
+      "id": 9 ,
+      "name": "Netflix",
+      "price": 52
+    }
+  ],
+
+  "expansion": [
+    {
+      "id": 1 ,
+      "percent": 1,
+      "amount": 82.83
+    },
+
+    {
+      "id": 2 ,
+      "percent": 6,
+      "amount": 496.98
+    },
+
+    {
+      "id": 3 ,
+      "percent": 2,
+      "amount": 165.66
+    },
+
+    {
+      "id": 4 ,
+      "percent": 3,
+      "amount": 248.49
+    }
+  ]
+}

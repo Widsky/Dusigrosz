@@ -1,0 +1,23 @@
+.dev {
+  @include main-elem;
+  @include center;
+  flex-direction: column;
+  color: $main-elem;
+  margin-top: 4rem;
+
+  .dev__title {
+    @include title;
+    padding-bottom: 1rem;
+  }
+
+  .dev__desc {
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+  }
+
+  .dev__column {
+    padding: 0.7rem 0;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+}
