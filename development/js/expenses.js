@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import "../scss/main.scss"
-import {Development} from "./development";
+import {Expansion} from "./expansion";
 
 const ExpensesElement = ({expenses}) => {
     return (
@@ -79,7 +79,7 @@ export function Expenses({summary}) {
                     className="expenses__amount">Wydatki stanowią {percentage.toFixed(0)}% wprowadzonej kwoty, a ich suma wynosi: {amountOfExpenses} zł</span>
             </section>
 
-            <Development rest={rest}/>
+            <Expansion rest={rest}/>
         </>
     );
 }

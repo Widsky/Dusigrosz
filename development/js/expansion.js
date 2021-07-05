@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import "../scss/main.scss"
 
-export function Development({rest}) {
+export function Expansion({rest}) {
     const [savings, setSavings] = useState(0);
     const [pleasure, setPleasure] = useState(0);
     const [investments, setInvestments] = useState(0);
