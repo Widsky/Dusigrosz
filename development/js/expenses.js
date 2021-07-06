@@ -36,7 +36,7 @@ export function Expenses({summary}) {
                 setPercentage(expensesElements[0].value);//pobieramy procent wydatków, który zapisany jest w obiekcie pod id 1 i index 0
                 setAOF(expensesElements[1].value);//pobieramy sumę wydatków, która jest pod id 2 i index 1
                 setRest(expensesElements[2].amount);
-            })
+            });
     }, []);
 
     const handleChange = (() => {
@@ -52,9 +52,10 @@ export function Expenses({summary}) {
                 return total + value;
             }, 0);
         });//pętla po tablicy, która sumuje wszystkie wartości z allExpenses
-    })
+    });
 
-    const test = () => {
+    const percentageCounter = () => {
+
         setPercentage(() => {
             return (
                 (amountOfExpenses / summary) * 100
@@ -62,6 +63,37 @@ export function Expenses({summary}) {
         });//zwracamy wartość procentową zarobków do wydatków
 
         setRest(() => summary - amountOfExpenses);//zwracamy resztę po odjęciu wydatków od zarobków
+    };
+
+    const showFormForNewExpense = (ev) => {
+        ev.preventDefault();
+        document.querySelector(".new__expense").classList.toggle("display");
+        document.querySelector(".btn--dis").classList.toggle("display");
+    }
+
+    const addNewExpense = (ev) => {
+        ev.preventDefault();
+
+        const newExpense = {
+            name: document.querySelectorAll(".new__expense__name--input")[0].value,
+            price: document.querySelectorAll(".new__expense__name--input")[1].value
+        };
+
+        fetch('http://localhost:3000/expenses/', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newExpense),
+        })
+            .then((res) => res.json())
+            .then((expense) => {
+                setExpenses((prevState) => [...prevState, expense])
+            });
+
+        document.querySelectorAll(".new__expense__name--input")[0].value = '';
+        document.querySelectorAll(".new__expense__name--input")[1].value = '';
+        return showFormForNewExpense(ev);
     }
 
     return (
@@ -69,11 +101,24 @@ export function Expenses({summary}) {
             <section className="expenses">
                 <h2 className="expenses__title">Wprowadź swoje wydatki</h2>
 
-                <form onChange={() => handleChange()} onKeyUp={test} className="expenses__list">
+                <form onChange={() => handleChange()} onKeyUp={percentageCounter} className="expenses__list">
                     <ExpensesElement expenses={expenses}/>
                 </form>
+                <form className="new__expense display" onSubmit={addNewExpense}>
+                    <label className="new__expense__container">
+                        <h3 className="new__expense__name">Nazwa wydatku:</h3>
+                        <input type="text" minLength="1" maxLength="25" className="new__expense__name--input" placeholder="Wprowadź nazwę"/>
+                    </label>
 
-                <button className="btn"><i className="fas fa-plus"> </i></button>
+                    <label className="new__expense__container">
+                        <h3 className="new__expense__name">Kwota:</h3>
+                        <input className="new__expense__name--input" type="number" min="0" max="1000000000000000000000000" placeholder="Wprowadź kwotę"/>
+                    </label>
+
+                    <button className="btn new__expense--btn" type="submit">Dodaj</button>
+
+                </form>
+                <button className="btn btn--dis" onClick={showFormForNewExpense}><i className="fas fa-plus"> </i></button>
 
                 <span
                     className="expenses__amount">Wydatki stanowią {percentage.toFixed(0)}% wprowadzonej kwoty, a ich suma wynosi: {amountOfExpenses} zł</span>

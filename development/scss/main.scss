@@ -9,7 +9,7 @@
 @import "elements/expenses";
 @import "elements/inputs";
 @import "elements/buttons";
-@import "elements/development";
+@import "elements/expansion";
 @import "elements/footer";
 
 
@@ -36,4 +36,8 @@ body {
   font-weight: 700;
   color: white;
   text-decoration: none;
+}
+
+.display {
+  display: none;
 }

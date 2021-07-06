@@ -33,3 +33,19 @@
     margin-top: 1rem;
   }
 }
+
+.new__expense {
+  @include center;
+  flex-direction: column;
+  font-size: 1.5rem;
+  padding: 3rem 0;
+  border: 2px solid $main-elem;
+  border-radius: 1rem;
+
+
+  .new__expense__container {
+    @include between;
+    gap: 1rem;
+    padding: 0.8rem;
+  }
+}
