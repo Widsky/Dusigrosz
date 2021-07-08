@@ -11,10 +11,12 @@
 }
 
 @mixin main-elem {
-  background: rgb(255,0,215);
-  background: linear-gradient(201deg, rgba(255,0,215,1) 0%, rgba(121,9,104,1) 33%, rgba(0,212,255,1) 100%);
-  border-radius: 8rem 2rem 8rem 2rem;
+  //background: rgb(255,0,215);
+  //background: linear-gradient(201deg, rgba(255,0,215,1) 0%, rgba(121,9,104,1) 33%, rgba(0,212,255,1) 100%);
+  background: #45496d;
+  //border-radius: 0.5rem;
   padding: 30px;
+  margin-top: 4rem;
 }
 
 @mixin title {

@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from "react";
 import "../scss/main.scss"
 
-export function Expansion({rest}) {
+
+export function Expansion({rest, summary, amountOfExpenses, expenses, value, percentage}) {
     const [savings, setSavings] = useState(0);
     const [pleasure, setPleasure] = useState(0);
     const [investments, setInvestments] = useState(0);
@@ -30,49 +31,65 @@ export function Expansion({rest}) {
                 })
 
             })
-    }, [])
+    }, []);
 
     const handleChange = () => {
-        setSavings(() => rest * document.querySelector(".savings").value/100);
+        setSavings(() => rest * document.querySelector(".savings").value / 100);
 
-        setPleasure(() => rest * document.querySelector(".pleasure").value/100);
+        setPleasure(() => rest * document.querySelector(".pleasure").value / 100);
 
-        setInvestments(() => rest * document.querySelector(".investments").value/100);
+        setInvestments(() => rest * document.querySelector(".investments").value / 100);
 
-        setEducation(() => rest * document.querySelector(".education").value/100);
-    }
+        setEducation(() => rest * document.querySelector(".education").value / 100);
+    };
 
     return (
-        <section className="dev">
-            <h2 className="dev__title">Rozwój</h2>
+        <>
+            <section className="dev">
+                <h2 className="dev__title">ROZWÓJ</h2>
 
-            <p className="dev__desc">Kapitał do podziału: {rest} zł</p>
+                <p className="dev__desc">Kapitał do podziału: {rest} zł</p>
 
-            <div className="dev__column__container">
-                <div className="dev__column">
-                    <span className="dev__column__title">Oszczędności </span>
-                    <input type="number" className="dev__input savings" min="0" max="100" placeholder="0" onChange={handleChange} defaultValue={percent[0]}/>
-                    <span>%, co stanowi kwotę {savings} zł</span>
+                <div className="dev__column__container">
+                    <div className="dev__column">
+                        <div className="dev__title__container">
+                            <h3 className="dev__column__title">Oszczędności </h3>
+                            <input id="savings" type="number" className="dev__input savings" min="0" max="100" placeholder="0" onChange={handleChange} defaultValue={percent[0]}/>%
+                        </div>
+                        <span className="dev__column__amount">Kwota {savings} zł</span>
+                    </div>
+
+                    <div className="dev__column">
+                        <div className="dev__title__container">
+                            <h3 className="dev__column__title">Przyjemności </h3>
+                            <input type="number" className="dev__input pleasure" min="0" max="100" placeholder="0" onChange={handleChange} defaultValue={percent[1]}/>%
+                        </div>
+                        <span className="dev__column__amount">Kwota {pleasure} zł</span>
+                    </div>
+
+                    <div className="dev__column">
+                        <div className="dev__title__container dev__title__container--bg">
+                            <h3 className="dev__column__title">Inwestycje </h3>
+                            <input type="number" className="dev__input investments" min="0" max="100" placeholder="0" onChange={handleChange} defaultValue={percent[2]}/>%
+                        </div>
+                        <span className="dev__column__amount">Kwota {investments} zł</span>
+                    </div>
+
+                    <div className="dev__column">
+                        <div className="dev__title__container">
+                            <h3 className="dev__column__title">Edukacja </h3>
+                            <input type="number" className="dev__input education" min="0" max="100" placeholder="0" onChange={handleChange} defaultValue={percent[3]}/>%
+                        </div>
+                        <span className="dev__column__amount">Kwota {education} zł</span>
+                    </div>
                 </div>
 
-                <div className="dev__column">
-                    <span className="dev__column__title">Przyjemności </span>
-                    <input type="number" className="dev__input pleasure" min="0" max="100" placeholder="0" onChange={handleChange} defaultValue={percent[1]}/>
-                    <span>%, co stanowi kwotę {pleasure} zł</span>
-                </div>
 
-                <div className="dev__column">
-                    <span className="dev__column__title">Inwestycje </span>
-                    <input type="number" className="dev__input investments" min="0" max="100" placeholder="0" onChange={handleChange} defaultValue={percent[2]}/>
-                    <span>%, co stanowi kwotę {investments} zł</span>
-                </div>
+            </section>
 
-                <div className="dev__column">
-                    <span className="dev__column__title">Edukacja </span>
-                    <input type="number" className="dev__input education" min="0" max="100" placeholder="0" onChange={handleChange} defaultValue={percent[3]}/>
-                    <span>%, co stanowi kwotę {education} zł</span>
-                </div>
+            <div className="btn__save__container">
+                <button className="btn btn--save" >Zapisz</button>
             </div>
-        </section>
+        </>
     );
 }

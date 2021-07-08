@@ -1,11 +1,9 @@
 .header {
-  background: $bg-color;
+  background: #45496d;
   height: 5rem;
   font-size: 1.7rem;
   color: white;
   margin-bottom: 4rem;
-  border-radius: 0 0 0 4rem;
-  border-bottom: 4px solid #C0C0C0;
 
   .header__container {
     @include between;
@@ -18,6 +16,7 @@
     .header__user {
       font-size: 1.9rem;
       font-weight: bold;
+      color: $pink-color;
     }
   }
 }

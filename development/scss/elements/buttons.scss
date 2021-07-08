@@ -20,13 +20,13 @@
 }
 
 .btn {
-  padding: 0.1rem 3rem;
-  border-radius: 1rem;
-  background-color: white;
-  border: 1px solid #d2cdcd;
+  padding: 0.8rem;
+  border-radius: 50%;
+  background-color: $pink-color;
+  border: 1px solid #ED39C0;
   box-shadow: 3px 2px 9px -2px gray;
-  font-size: 2rem;
-  color: $main-color;
+  font-size: 1.6rem;
+  color: $main-elem;
   & {
     display: inline-block;
     vertical-align: middle;
@@ -47,5 +47,11 @@
 }
 
 .new__expense--btn {
-  margin-top: 2rem;
+  margin: 1rem;
+}
+
+.btn--save {
+  padding: 0.4rem 2rem;
+  border-radius: 0.3rem;
+  margin-top: 4rem;
 }

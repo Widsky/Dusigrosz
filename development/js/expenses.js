@@ -10,7 +10,8 @@ const ExpensesElement = ({expenses}) => {
                     if (el.id > 3) {
                         return <label className="expense__elem" key={el.id}>
                             <h2 className="expense__name">{el.name}</h2>
-                            <input className="expense__price" type="number" defaultValue={el.price} min="0" max="1000000000000000000000000"/>
+                            <input className="expense__price" type="number" defaultValue={el.price} min="0"
+                                   max="1000000000000000000000000"/>
                         </label>
                     }
                 })
@@ -20,7 +21,7 @@ const ExpensesElement = ({expenses}) => {
 };
 
 
-export function Expenses({summary}) {
+export function Expenses({summary, value}) {
     const [amountOfExpenses, setAOF] = useState(0);//suma wydatków
     const [percentage, setPercentage] = useState(0);//procent wydatków
     const [rest, setRest] = useState(0);//reszta z wypłaty przekazywana do development
@@ -69,14 +70,19 @@ export function Expenses({summary}) {
         ev.preventDefault();
         document.querySelector(".new__expense").classList.toggle("display");
         document.querySelector(".btn--dis").classList.toggle("display");
+        return handleChange();
     }
 
     const addNewExpense = (ev) => {
         ev.preventDefault();
 
+        if (document.querySelectorAll(".new__expense__name--input")[0].value.length <= 0) {
+            return showFormForNewExpense(ev);
+        }
+
         const newExpense = {
             name: document.querySelectorAll(".new__expense__name--input")[0].value,
-            price: document.querySelectorAll(".new__expense__name--input")[1].value
+            price: 0
         };
 
         fetch('http://localhost:3000/expenses/', {
@@ -92,39 +98,44 @@ export function Expenses({summary}) {
             });
 
         document.querySelectorAll(".new__expense__name--input")[0].value = '';
-        document.querySelectorAll(".new__expense__name--input")[1].value = '';
+        // document.querySelectorAll(".new__expense__name--input")[1].value = '';
         return showFormForNewExpense(ev);
     }
 
     return (
         <>
             <section className="expenses">
-                <h2 className="expenses__title">Wprowadź swoje wydatki</h2>
+                <h2 className="expenses__title">WYDATKI</h2>
 
-                <form onChange={() => handleChange()} onKeyUp={percentageCounter} className="expenses__list">
+                <form onChange={() => handleChange()} onKeyUp={percentageCounter} className="expenses__list"
+                      onClick={percentageCounter}>
                     <ExpensesElement expenses={expenses}/>
                 </form>
                 <form className="new__expense display" onSubmit={addNewExpense}>
                     <label className="new__expense__container">
                         <h3 className="new__expense__name">Nazwa wydatku:</h3>
-                        <input type="text" minLength="1" maxLength="25" className="new__expense__name--input" placeholder="Wprowadź nazwę"/>
+                        <input type="text" minLength="1" maxLength="25" className="new__expense__name--input"
+                               placeholder="Wprowadź nazwę"/>
                     </label>
 
-                    <label className="new__expense__container">
-                        <h3 className="new__expense__name">Kwota:</h3>
-                        <input className="new__expense__name--input" type="number" min="0" max="1000000000000000000000000" placeholder="Wprowadź kwotę"/>
-                    </label>
-
-                    <button className="btn new__expense--btn" type="submit">Dodaj</button>
-
+                    {/*<label className="new__expense__container">*/}
+                    {/*    <h3 className="new__expense__name">Kwota:</h3>*/}
+                    {/*    <input className="new__expense__name--input" type="number" min="0" max="1000000000000000000000000" placeholder="Wprowadź kwotę"/>*/}
+                    {/*</label>*/}
+                    <div className="btn__container">
+                        <button className="btn new__expense--btn btn--save" type="submit">Dodaj</button>
+                        <button className="btn new__expense--btn btn--save" onClick={showFormForNewExpense}>Anuluj</button>
+                    </div>
                 </form>
-                <button className="btn btn--dis" onClick={showFormForNewExpense}><i className="fas fa-plus"> </i></button>
+                <button className="btn btn--dis" onClick={showFormForNewExpense}><i className="fas fa-plus"> </i>
+                </button>
 
                 <span
                     className="expenses__amount">Wydatki stanowią {percentage.toFixed(0)}% wprowadzonej kwoty, a ich suma wynosi: {amountOfExpenses} zł</span>
             </section>
 
-            <Expansion rest={rest}/>
+            <Expansion rest={rest} summary={summary} value={value} amountOfExpenses={amountOfExpenses}
+                       percentage={percentage} expenses={expenses}/>
         </>
     );
 }

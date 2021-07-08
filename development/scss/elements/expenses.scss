@@ -3,7 +3,7 @@
   @include center;
   flex-direction: column;
   color: $main-elem;
-  margin-top: 4rem;
+
 
   .expenses__title {
     @include title;
@@ -38,7 +38,7 @@
   @include center;
   flex-direction: column;
   font-size: 1.5rem;
-  padding: 3rem 0;
+  padding: 1rem 0;
   border: 2px solid $main-elem;
   border-radius: 1rem;
 
@@ -48,4 +48,6 @@
     gap: 1rem;
     padding: 0.8rem;
   }
+
+
 }
