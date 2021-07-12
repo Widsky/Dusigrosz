@@ -1,4 +1,30 @@
 {
+  "summary": [
+    {
+      "id": 1,
+      "amount": 1000
+    },
+    {
+      "id": 2,
+      "value": 1716
+    },
+    {
+      "id": 3,
+      "value": 331.36
+    },
+    {
+      "id": 4,
+      "value": 165.68
+    },
+    {
+      "id": 5,
+      "value": 165.68
+    },
+    {
+      "id": 6,
+      "value": 248.52
+    }
+  ],
   "income": [
     {
       "id": 1,
@@ -60,9 +86,14 @@
       "price": 52
     },
     {
-      "name": "trhrth",
+      "name": "Trawnik",
       "price": 0,
       "id": 10
+    },
+    {
+      "name": "jytjujut",
+      "price": 0,
+      "id": 11
     }
   ],
   "expansion": [
@@ -86,5 +117,102 @@
       "percent": 3,
       "amount": 248.49
     }
-  ]
+  ],
+  "Styczen": {
+    "month": "Styczeń",
+    "income": 10000,
+    "expenses": 1717,
+    "savings": 165.66,
+    "pleasure": 496.98,
+    "investments": 165.66,
+    "education": 248.49
+  },
+  "Luty": {
+    "income": 0,
+    "expenses": 0,
+    "savings": 0,
+    "pleasure": 0,
+    "investments": 0,
+    "education": 0
+  },
+  "Marzec": {
+    "income": 0,
+    "expenses": 0,
+    "savings": 0,
+    "pleasure": 0,
+    "investments": 0,
+    "education": 0
+  },
+  "Kwiecien": {
+    "income": 0,
+    "expenses": 0,
+    "savings": 0,
+    "pleasure": 0,
+    "investments": 0,
+    "education": 0
+  },
+  "Maj": {
+    "income": 0,
+    "expenses": 0,
+    "savings": 0,
+    "pleasure": 0,
+    "investments": 0,
+    "education": 0
+  },
+  "Czerwiec": {
+    "income": 10000,
+    "expenses": 1717,
+    "savings": 165.66,
+    "pleasure": 496.98,
+    "investments": 165.66,
+    "education": 248.49
+  },
+  "Lipiec": {
+    "income": 0,
+    "expenses": 0,
+    "savings": 0,
+    "pleasure": 0,
+    "investments": 0,
+    "education": 0
+  },
+  "Sierpien": {
+    "income": 0,
+    "expenses": 0,
+    "savings": 0,
+    "pleasure": 0,
+    "investments": 0,
+    "education": 0
+  },
+  "Wrzesien": {
+    "income": 0,
+    "expenses": 0,
+    "savings": 0,
+    "pleasure": 0,
+    "investments": 0,
+    "education": 0
+  },
+  "Pazdziernik": {
+    "income": 0,
+    "expenses": 0,
+    "savings": 0,
+    "pleasure": 0,
+    "investments": 0,
+    "education": 0
+  },
+  "Listopad": {
+    "income": 0,
+    "expenses": 0,
+    "savings": 0,
+    "pleasure": 0,
+    "investments": 0,
+    "education": 0
+  },
+  "Grudzien": {
+    "income": 0,
+    "expenses": 0,
+    "savings": 0,
+    "pleasure": 0,
+    "investments": 0,
+    "education": 0
+  }
 }

@@ -6,7 +6,6 @@ import {Expenses} from "./expenses";
 export function Income() {
     const [summary, setSummary] = useState(0);
     const [value, setValue] = useState([]);
-    const [test, setTest] = useState({val1:0, val2:0, val3:0})
 
     useEffect(() => {
         fetch('http://localhost:3000/income', {
@@ -29,15 +28,6 @@ export function Income() {
         setSummary(() => {
             return a + b;
         })
-
-        // setTest(() => {
-        //     return (
-        //         test.val1 = parseInt(document.querySelectorAll('.income__input')[0].value),
-        //         // test.val2 = 1,
-        //         // test.val3 = 1,
-        //         console.log(test)
-        // )
-        // })
     }
 
     return (

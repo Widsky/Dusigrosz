@@ -4,9 +4,7 @@
   flex-direction: column;
   color: $main-elem;
   margin-top: 4rem;
-  background: rgb(54,52,205);
-  background: linear-gradient(126deg, rgba(54,52,205,1) 44%, rgba(236,161,234,1) 100%);
-  border-radius: 0;
+  background: #45496d;
 
   .dev__title {
     @include title;
@@ -59,9 +57,4 @@
       }
     }
   }
-}
-
-.btn__save__container {
-  width: 100%;
-  text-align: center;
 }

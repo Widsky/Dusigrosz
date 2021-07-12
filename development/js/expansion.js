@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from "react";
 import "../scss/main.scss"
+import {Summary} from "./summary";
 
 
-export function Expansion({rest, summary, amountOfExpenses, expenses, value, percentage}) {
+export function Expansion({rest, summary, amountOfExpenses, expenses, value, percentage, setSummary}) {
     const [savings, setSavings] = useState(0);
     const [pleasure, setPleasure] = useState(0);
     const [investments, setInvestments] = useState(0);
@@ -87,9 +88,7 @@ export function Expansion({rest, summary, amountOfExpenses, expenses, value, per
 
             </section>
 
-            <div className="btn__save__container">
-                <button className="btn btn--save" >Zapisz</button>
-            </div>
+            <Summary summary={summary} amountOfExpenses={amountOfExpenses} savings={savings} pleasure={pleasure} investments={investments} education={education} />
         </>
     );
 }

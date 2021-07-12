@@ -21,7 +21,7 @@ const ExpensesElement = ({expenses}) => {
 };
 
 
-export function Expenses({summary, value}) {
+export function Expenses({summary, value, setSummary}) {
     const [amountOfExpenses, setAOF] = useState(0);//suma wydatków
     const [percentage, setPercentage] = useState(0);//procent wydatków
     const [rest, setRest] = useState(0);//reszta z wypłaty przekazywana do development
@@ -134,8 +134,7 @@ export function Expenses({summary, value}) {
                     className="expenses__amount">Wydatki stanowią {percentage.toFixed(0)}% wprowadzonej kwoty, a ich suma wynosi: {amountOfExpenses} zł</span>
             </section>
 
-            <Expansion rest={rest} summary={summary} value={value} amountOfExpenses={amountOfExpenses}
-                       percentage={percentage} expenses={expenses}/>
+            <Expansion rest={rest} summary={summary} value={value} amountOfExpenses={amountOfExpenses} percentage={percentage} expenses={expenses}/>
         </>
     );
 }
