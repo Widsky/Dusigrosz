@@ -3,7 +3,8 @@ import "../scss/main.scss"
 
 export const Summary = ({summary, amountOfExpenses, education, investments, pleasure, savings}) => {
 
-    const handleShow = () => {
+    const handleShow = (ev) => {
+        ev.preventDefault();
         document.querySelector(".summary__form").classList.toggle("display");
         document.querySelector(".summary__save").classList.toggle("display");
     };
@@ -26,11 +27,13 @@ export const Summary = ({summary, amountOfExpenses, education, investments, plea
             }),
         })
             .then((res) => res.json())
+
+        return handleShow(ev);
     };
 
     return (
         <section className="summary">
-            <h4 className="summary__title">PODSUMOWANIE OSTATNICH OBLICZEŃ</h4>
+            <h4 className="summary__title">PODSUMOWANIE</h4>
 
             <ul className="summary__list">
                 <li className="summary__list__elem">
@@ -84,7 +87,7 @@ export const Summary = ({summary, amountOfExpenses, education, investments, plea
                 </label>
                 <div className="summary__buttons">
                     <button className="btn btn__summary" onClick={handleSave}>Zapisz</button>
-                    <button className="btn btn__summary">Anuluj</button>
+                    <button className="btn btn__summary" onClick={handleShow}>Anuluj</button>
                 </div>
             </form>
 

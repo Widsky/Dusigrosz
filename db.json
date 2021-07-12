@@ -94,6 +94,11 @@
       "name": "jytjujut",
       "price": 0,
       "id": 11
+    },
+    {
+      "name": "drhfdrthjd",
+      "price": 0,
+      "id": 12
     }
   ],
   "expansion": [
@@ -119,7 +124,6 @@
     }
   ],
   "Styczen": {
-    "month": "Styczeń",
     "income": 10000,
     "expenses": 1717,
     "savings": 165.66,
@@ -136,20 +140,20 @@
     "education": 0
   },
   "Marzec": {
-    "income": 0,
-    "expenses": 0,
-    "savings": 0,
-    "pleasure": 0,
-    "investments": 0,
-    "education": 0
+    "income": 10000,
+    "expenses": 1717,
+    "savings": 165.66,
+    "pleasure": 496.98,
+    "investments": 165.66,
+    "education": 248.49
   },
   "Kwiecien": {
-    "income": 0,
-    "expenses": 0,
-    "savings": 0,
-    "pleasure": 0,
-    "investments": 0,
-    "education": 0
+    "income": 10000,
+    "expenses": 1717,
+    "savings": 165.66,
+    "pleasure": 496.98,
+    "investments": 165.66,
+    "education": 248.49
   },
   "Maj": {
     "income": 0,
@@ -184,12 +188,12 @@
     "education": 0
   },
   "Wrzesien": {
-    "income": 0,
-    "expenses": 0,
-    "savings": 0,
-    "pleasure": 0,
-    "investments": 0,
-    "education": 0
+    "income": 10000,
+    "expenses": 1717,
+    "savings": 165.66,
+    "pleasure": 496.98,
+    "investments": 165.66,
+    "education": 248.49
   },
   "Pazdziernik": {
     "income": 0,
