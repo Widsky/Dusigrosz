@@ -13,10 +13,33 @@
       font-size: 2.5rem;
     }
 
-    .header__user {
-      font-size: 1.9rem;
-      font-weight: bold;
-      color: $pink-color;
+    .header__user__container {
+      @include between;
+      gap: 0.5rem;
+
+      .nav__list {
+        @include between;
+        margin-right: 3rem;
+        font-size: 1.2rem;
+
+        .nav__link {
+          color: white;
+          padding: 0.6rem 1rem;
+          list-style: none;
+          text-decoration: none;
+
+          &:hover {
+            box-sizing: border-box;
+            border-bottom: 3px solid $pink-color;
+          }
+        }
+      }
+
+      .header__user {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $pink-color;
+      }
     }
   }
 }

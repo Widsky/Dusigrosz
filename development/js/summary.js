@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react";
 import "../scss/main.scss"
 
+import {History} from "./history";
+
 export const Summary = ({summary, amountOfExpenses, education, investments, pleasure, savings}) => {
 
     const handleShow = (ev) => {
@@ -32,69 +34,70 @@ export const Summary = ({summary, amountOfExpenses, education, investments, plea
     };
 
     return (
-        <section className="summary">
-            <h4 className="summary__title">PODSUMOWANIE</h4>
+            <section className="summary">
 
-            <ul className="summary__list">
-                <li className="summary__list__elem">
-                    <span className="summary__list__elem__name">Przychody </span>
-                    <span className='summary__list__elem__price sum__income'>{summary} zł</span></li>
+                <h4 className="summary__title">PODSUMOWANIE</h4>
 
-                <li className="summary__list__elem">
-                    <span className="summary__list__elem__name">Wydatki </span>
-                    <span className='summary__list__elem__price sum__expenses'>{amountOfExpenses} zł</span>
-                </li>
+                <ul className="summary__list">
+                    <li className="summary__list__elem">
+                        <span className="summary__list__elem__name">Przychody </span>
+                        <span className='summary__list__elem__price sum__income'>{summary} zł</span></li>
 
-                <li className="summary__list__elem">
-                    <span className="summary__list__elem__name">Oszczędności </span>
-                    <span className='summary__list__elem__price sum__savings'>{savings} zł</span>
-                </li>
+                    <li className="summary__list__elem">
+                        <span className="summary__list__elem__name">Wydatki </span>
+                        <span className='summary__list__elem__price sum__expenses'>{amountOfExpenses} zł</span>
+                    </li>
 
-                <li className="summary__list__elem">
-                    <span className="summary__list__elem__name">Przyjemności </span>
-                    <span className='summary__list__elem__price sum__pleasure'>{pleasure} zł</span>
-                </li>
+                    <li className="summary__list__elem">
+                        <span className="summary__list__elem__name">Oszczędności </span>
+                        <span className='summary__list__elem__price sum__savings'>{savings} zł</span>
+                    </li>
 
-                <li className="summary__list__elem">
-                    <span className="summary__list__elem__name">Inwestycje </span>
-                    <span className='summary__list__elem__price sum__investments'>{investments} zł</span>
-                </li>
+                    <li className="summary__list__elem">
+                        <span className="summary__list__elem__name">Przyjemności </span>
+                        <span className='summary__list__elem__price sum__pleasure'>{pleasure} zł</span>
+                    </li>
 
-                <li className="summary__list__elem">
-                    <span className="summary__list__elem__name">Edukacja </span>
-                    <span className='summary__list__elem__price sum__education'>{education} zł</span>
-                </li>
-            </ul>
+                    <li className="summary__list__elem">
+                        <span className="summary__list__elem__name">Inwestycje </span>
+                        <span className='summary__list__elem__price sum__investments'>{investments} zł</span>
+                    </li>
 
-
-            <form className="summary__form display">
-                <label className="summary__label">
-                    <h3 className="summary__month">Wybierz miesiąc</h3>
-                    <select className="summary__select">
-                        <option>Styczen</option>
-                        <option>Luty</option>
-                        <option>Marzec</option>
-                        <option>Kwiecien</option>
-                        <option>Maj</option>
-                        <option>Czerwiec</option>
-                        <option>Lipiec</option>
-                        <option>Sierpien</option>
-                        <option>Wrzesien</option>
-                        <option>Pazdziernik</option>
-                        <option>Listopad</option>
-                        <option>Grudzien</option>
-                    </select>
-                </label>
-                <div className="summary__buttons">
-                    <button className="btn btn__summary" onClick={handleSave}>Zapisz</button>
-                    <button className="btn btn__summary" onClick={handleShow}>Anuluj</button>
-                </div>
-            </form>
+                    <li className="summary__list__elem">
+                        <span className="summary__list__elem__name">Edukacja </span>
+                        <span className='summary__list__elem__price sum__education'>{education} zł</span>
+                    </li>
+                </ul>
 
 
-            <button className="btn btn--save summary__save" onClick={handleShow}>Zapisz</button>
+                <form className="summary__form display">
+                    <label className="summary__label">
+                        <h3 className="summary__month">Wybierz miesiąc</h3>
+                        <select className="summary__select">
+                            <option>Styczen</option>
+                            <option>Luty</option>
+                            <option>Marzec</option>
+                            <option>Kwiecien</option>
+                            <option>Maj</option>
+                            <option>Czerwiec</option>
+                            <option>Lipiec</option>
+                            <option>Sierpien</option>
+                            <option>Wrzesien</option>
+                            <option>Pazdziernik</option>
+                            <option>Listopad</option>
+                            <option>Grudzien</option>
+                        </select>
+                    </label>
+                    <div className="summary__buttons">
+                        <button className="btn btn__summary" onClick={handleSave}>Zapisz</button>
+                        <button className="btn btn__summary" onClick={handleShow}>Anuluj</button>
+                    </div>
+                </form>
 
 
-        </section>
+                <button className="btn btn--save summary__save" onClick={handleShow}>Zapisz</button>
+
+                <History/>
+            </section>
     );
 }
