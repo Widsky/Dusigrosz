@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import "../scss/main.scss"
 
 export const History = () => {
@@ -20,7 +20,6 @@ export const History = () => {
             .then((res) => res.json())
             .then((historyData) => {
                 setHistorySummary(() => {
-                    console.log(historyData);
                     return {
                         income: historyData.income,
                         expenses: historyData.expenses,

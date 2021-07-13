@@ -86,19 +86,9 @@
       "price": 52
     },
     {
-      "name": "Trawnik",
+      "name": "gerdgbverb",
       "price": 0,
       "id": 10
-    },
-    {
-      "name": "jytjujut",
-      "price": 0,
-      "id": 11
-    },
-    {
-      "name": "drhfdrthjd",
-      "price": 0,
-      "id": 12
     }
   ],
   "expansion": [
@@ -124,44 +114,44 @@
     }
   ],
   "Styczen": {
-    "income": 10000,
-    "expenses": 1717,
-    "savings": 165.66,
-    "pleasure": 496.98,
-    "investments": 165.66,
-    "education": 248.49
+    "income": 3860,
+    "expenses": 1928,
+    "savings": 251.16,
+    "pleasure": 115.92,
+    "investments": 367.08,
+    "education": 753.48
   },
   "Luty": {
-    "income": 0,
-    "expenses": 0,
-    "savings": 0,
-    "pleasure": 0,
-    "investments": 0,
-    "education": 0
+    "income": 3929,
+    "expenses": 1864,
+    "savings": 289.1,
+    "pleasure": 82.6,
+    "investments": 206.5,
+    "education": 1218.35
   },
   "Marzec": {
-    "income": 10000,
-    "expenses": 1717,
-    "savings": 165.66,
-    "pleasure": 496.98,
-    "investments": 165.66,
-    "education": 248.49
+    "income": 3759,
+    "expenses": 2098,
+    "savings": 448.47,
+    "pleasure": 548.13,
+    "investments": 99.66,
+    "education": 249.15
   },
   "Kwiecien": {
-    "income": 12000,
-    "expenses": 1717,
-    "savings": 165.66,
-    "pleasure": 496.98,
-    "investments": 165.66,
-    "education": 248.49
+    "income": 4222,
+    "expenses": 2316,
+    "savings": 590.86,
+    "pleasure": 209.66,
+    "investments": 95.3,
+    "education": 285.9
   },
   "Maj": {
-    "income": 0,
-    "expenses": 0,
-    "savings": 0,
-    "pleasure": 0,
-    "investments": 0,
-    "education": 0
+    "income": 9059,
+    "expenses": 2429,
+    "savings": 1856.4,
+    "pleasure": 663,
+    "investments": 1790.1,
+    "education": 265.2
   },
   "Czerwiec": {
     "income": 10000,
@@ -172,51 +162,51 @@
     "education": 248.49
   },
   "Lipiec": {
-    "income": 0,
-    "expenses": 0,
-    "savings": 0,
-    "pleasure": 0,
-    "investments": 0,
-    "education": 0
+    "income": 8909,
+    "expenses": 3010,
+    "savings": 1297.78,
+    "pleasure": 825.86,
+    "investments": 884.85,
+    "education": 530.91
   },
   "Sierpien": {
-    "income": 0,
-    "expenses": 0,
-    "savings": 0,
-    "pleasure": 0,
-    "investments": 0,
-    "education": 0
+    "income": 9254,
+    "expenses": 289,
+    "savings": 717.2,
+    "pleasure": 986.15,
+    "investments": 717.2,
+    "education": 986.15
   },
   "Wrzesien": {
-    "income": 10000,
-    "expenses": 1717,
-    "savings": 165.66,
-    "pleasure": 496.98,
-    "investments": 165.66,
-    "education": 248.49
+    "income": 4542,
+    "expenses": 435,
+    "savings": 369.63,
+    "pleasure": 205.35,
+    "investments": 123.21,
+    "education": 574.98
   },
   "Pazdziernik": {
-    "income": 0,
-    "expenses": 0,
-    "savings": 0,
-    "pleasure": 0,
-    "investments": 0,
-    "education": 0
+    "income": 8909,
+    "expenses": 3010,
+    "savings": 1297.78,
+    "pleasure": 825.86,
+    "investments": 884.85,
+    "education": 530.91
   },
   "Listopad": {
-    "income": 0,
-    "expenses": 0,
-    "savings": 0,
-    "pleasure": 0,
-    "investments": 0,
-    "education": 0
+    "income": 5000,
+    "expenses": 345,
+    "savings": 46.55,
+    "pleasure": 139.65,
+    "investments": 93.1,
+    "education": 139.65
   },
   "Grudzien": {
-    "income": 0,
-    "expenses": 0,
-    "savings": 0,
-    "pleasure": 0,
-    "investments": 0,
-    "education": 0
+    "income": 7600,
+    "expenses": 4669,
+    "savings": 146.55,
+    "pleasure": 87.93,
+    "investments": 58.62,
+    "education": 175.86
   }
 }

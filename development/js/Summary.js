@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import "../scss/main.scss"
 
-import {History} from "./history";
+import {History} from "./History";
 
 export const Summary = ({summary, amountOfExpenses, education, investments, pleasure, savings}) => {
 
