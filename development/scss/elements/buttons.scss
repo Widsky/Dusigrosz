@@ -1,48 +1,17 @@
-@-webkit-keyframes hvr-buzz {
-  50% {
-    -webkit-transform: translateX(3px) rotate(2deg);
-    transform: translateX(3px) rotate(2deg);
-  }
-  100% {
-    -webkit-transform: translateX(-3px) rotate(-2deg);
-    transform: translateX(-3px) rotate(-2deg);
-  }
-}
-@keyframes hvr-buzz {
-  50% {
-    -webkit-transform: translateX(3px) rotate(2deg);
-    transform: translateX(3px) rotate(2deg);
-  }
-  100% {
-    -webkit-transform: translateX(-3px) rotate(-2deg);
-    transform: translateX(-3px) rotate(-2deg);
-  }
-}
+
 
 .btn {
   padding: 0.8rem;
   border-radius: 50%;
   background-color: $pink-color;
   border: 1px solid #ED39C0;
-  box-shadow: 3px 2px 9px -2px gray;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   font-size: 1.6rem;
   color: $main-elem;
-  & {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  }
-  &:hover, &:focus, &:active {
-    -webkit-animation-name: hvr-buzz;
-    animation-name: hvr-buzz;
-    -webkit-animation-duration: 0.15s;
-    animation-duration: 0.15s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
+  cursor: pointer;
+
+  &:hover {
+    background: #ce36a9;
   }
 }
 
@@ -50,6 +19,7 @@
   margin: 1rem;
 }
 
+.history__btn,
 .btn__summary,
 .btn--save {
   padding: 0.4rem 2rem;
@@ -59,4 +29,9 @@
 
 .summary__save {
   margin-bottom: 2rem;
+}
+
+.history__btn {
+  margin: 0 0.5rem 0 0;
+  font-size: 0.8rem;
 }

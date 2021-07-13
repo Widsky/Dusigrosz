@@ -7,17 +7,38 @@ export const History = () => {
         expenses: 0,
         savings: 0,
         pleasure: 0,
-        investments:0,
+        investments: 0,
         education: 0
     });
 
+    const handleDownload = (ev) => {
+        ev.preventDefault();
+
+        fetch(`http://localhost:3000/${document.querySelector('.history__select').value}`, {
+            method: 'GET'
+        })
+            .then((res) => res.json())
+            .then((historyData) => {
+                setHistorySummary(() => {
+                    console.log(historyData);
+                    return {
+                        income: historyData.income,
+                        expenses: historyData.expenses,
+                        savings: historyData.savings,
+                        pleasure: historyData.pleasure,
+                        investments: historyData.investments,
+                        education: historyData.education
+                    }
+                })
+            });
+    }
 
 
     return (
         <>
             <h4 className="summary__title">HISTORIA</h4>
 
-            <form className="summary__form history__form">
+            <form className="summary__form history__form" onSubmit={handleDownload}>
                 <label className="summary__label">
                     <h3 className="summary__month">Wybierz miesiąc</h3>
                     <select className="history__select">
@@ -35,6 +56,8 @@ export const History = () => {
                         <option>Grudzien</option>
                     </select>
                 </label>
+
+                <button type="submit" className="btn history__btn">Pokaż</button>
             </form>
 
             <ul className="summary__list">
