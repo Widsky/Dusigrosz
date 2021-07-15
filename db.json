@@ -1,118 +1,4 @@
 {
-  "summary": [
-    {
-      "id": 1,
-      "amount": 1000
-    },
-    {
-      "id": 2,
-      "value": 1716
-    },
-    {
-      "id": 3,
-      "value": 331.36
-    },
-    {
-      "id": 4,
-      "value": 165.68
-    },
-    {
-      "id": 5,
-      "value": 165.68
-    },
-    {
-      "id": 6,
-      "value": 248.52
-    }
-  ],
-  "income": [
-    {
-      "id": 1,
-      "value": 7000
-    },
-    {
-      "id": 2,
-      "value": 3000
-    },
-    {
-      "id": 3,
-      "value": 10000
-    }
-  ],
-  "expenses": [
-    {
-      "id": 1,
-      "name": "percentage",
-      "value": 17
-    },
-    {
-      "id": 2,
-      "name": "sum",
-      "value": 1717
-    },
-    {
-      "id": 3,
-      "name": "Rest",
-      "amount": 8283
-    },
-    {
-      "id": 4,
-      "name": "Mieszkanie",
-      "price": 1000
-    },
-    {
-      "id": 5,
-      "name": "Jedzenie",
-      "price": 456
-    },
-    {
-      "id": 6,
-      "name": "Prąd",
-      "price": 54
-    },
-    {
-      "id": 7,
-      "name": "Woda",
-      "price": 59
-    },
-    {
-      "id": 8,
-      "name": "Rata za odkurzacz",
-      "price": 96
-    },
-    {
-      "id": 9,
-      "name": "Netflix",
-      "price": 52
-    },
-    {
-      "name": "gerdgbverb",
-      "price": 0,
-      "id": 10
-    }
-  ],
-  "expansion": [
-    {
-      "id": 1,
-      "percent": 6,
-      "amount": 165.66
-    },
-    {
-      "id": 2,
-      "percent": 6,
-      "amount": 496.98
-    },
-    {
-      "id": 3,
-      "percent": 2,
-      "amount": 165.66
-    },
-    {
-      "id": 4,
-      "percent": 3,
-      "amount": 248.49
-    }
-  ],
   "Styczen": {
     "income": 3860,
     "expenses": 1928,
@@ -130,12 +16,12 @@
     "education": 1218.35
   },
   "Marzec": {
-    "income": 3759,
-    "expenses": 2098,
-    "savings": 448.47,
-    "pleasure": 548.13,
-    "investments": 99.66,
-    "education": 249.15
+    "income": 7000,
+    "expenses": 700,
+    "savings": 252,
+    "pleasure": 315,
+    "investments": 252,
+    "education": 252
   },
   "Kwiecien": {
     "income": 4222,
@@ -154,12 +40,12 @@
     "education": 265.2
   },
   "Czerwiec": {
-    "income": 10000,
-    "expenses": 1717,
-    "savings": 165.66,
-    "pleasure": 496.98,
-    "investments": 165.66,
-    "education": 248.49
+    "income": 5000,
+    "expenses": 400,
+    "savings": 276,
+    "pleasure": 506,
+    "investments": 966,
+    "education": 552
   },
   "Lipiec": {
     "income": 8909,
@@ -170,12 +56,12 @@
     "education": 530.91
   },
   "Sierpien": {
-    "income": 9254,
-    "expenses": 289,
-    "savings": 717.2,
-    "pleasure": 986.15,
-    "investments": 717.2,
-    "education": 986.15
+    "income": 11000,
+    "expenses": 2345,
+    "savings": 1990.65,
+    "pleasure": 2250.3,
+    "investments": 1644.45,
+    "education": 952.05
   },
   "Wrzesien": {
     "income": 4542,
@@ -195,11 +81,11 @@
   },
   "Listopad": {
     "income": 5000,
-    "expenses": 345,
-    "savings": 46.55,
-    "pleasure": 139.65,
-    "investments": 93.1,
-    "education": 139.65
+    "expenses": 4862,
+    "savings": 1.38,
+    "pleasure": 6.9,
+    "investments": 6.9,
+    "education": 13.8
   },
   "Grudzien": {
     "income": 7600,
