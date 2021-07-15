@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "-": "^0.0.1",
+    "gh-pages": "^3.2.3",
     "gulp-cli": "^2.3.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
@@ -28,7 +29,9 @@
   "scripts": {
     "test": "gulp",
     "start": "webpack-dev-server --hot -d",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -40,7 +43,7 @@
   "bugs": {
     "url": "https://github.com/Widsky/Dusigrosz/issues"
   },
-  "homepage": "https://github.com/Widsky/Dusigrosz#readme",
+  "homepage": "https://widsky.github.io/Dusigrosz/",
   "browserslist": [
     "defaults"
   ]
