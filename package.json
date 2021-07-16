@@ -1,5 +1,6 @@
 {
-  "name": "Dusigrosz",
+  "homepage": "http://widsky.github.io/dusigrosz",
+  "name": "dusigrosz",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -29,22 +30,21 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d development/build",
     "test": "gulp",
     "start": "webpack-dev-server --hot -d",
     "build": "webpack -p"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Widsky/Dusigrosz.git"
+    "url": "git+https://github.com/Widsky/dusigrosz.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Widsky/Dusigrosz/issues"
+    "url": "https://github.com/Widsky/dusigrosz/issues"
   },
-  "homepage": "https://widsky.github.io/dusigrosz",
   "browserslist": [
     "defaults"
   ]
